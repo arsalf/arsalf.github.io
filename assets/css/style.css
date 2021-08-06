@@ -1,0 +1,138 @@
+/* Color Palette */
+
+
+/*  #212121 
+    #323232
+    #0D7377
+    #14FFEC
+    #4337B8
+*/
+
+body {
+    font-family: 'Spectral', serif;
+}
+
+.container-content {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 25px;
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+}
+
+.navbar-dark {
+    background-color: #212121;
+}
+
+section.image {
+    background: url("/assets/img/header_bg.jpg");
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 75vh;
+}
+
+
+/*
+ * ==== Losange
+ */
+
+.losange,
+.losange div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.losange {
+    transform: rotate(45deg) translateY(10px);
+    border: 3px solid #14FFEC;
+}
+
+.losange .los1 {
+    width: 305px;
+    height: 305px;
+    transform: rotate(-45deg) translateY(-75px);
+}
+
+.losange .los1 img {
+    width: 100%;
+    height: auto;
+}
+
+.my-name {
+    padding-top: 15px;
+}
+
+
+/* style hr (line) */
+
+.divider {
+    display: flex;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    flex: 1;
+}
+
+.line {
+    align-items: center;
+    margin: 1em -1em;
+}
+
+.line:before,
+.line:after {
+    height: 2px;
+    margin: 0 1em;
+}
+
+.one-line:before,
+.one-line:after {
+    background: rgb(30, 30, 30);
+    background: radial-gradient(circle, #4337B8 0%, rgba(20, 255, 236, 1) 100%);
+}
+
+.divider.line.one-line {
+    margin-bottom: 10px;
+}
+
+
+/* Section Profile */
+
+.my-picture-profile {
+    padding-bottom: 1em;
+}
+
+.my-contact {
+    background-color: #212121;
+    color: white;
+}
+
+.my-contact h2 {
+    margin-top: 1em;
+    padding-top: 11px;
+}
+
+.my-contact hr,
+.my-contact h3 {
+    margin: 0;
+}
+
+.my-contact .container {
+    padding-bottom: 20px;
+}
+
+li a {
+    cursor: pointer;
+}
+
+footer {
+    height: 5vh;
+}
