@@ -1,5 +1,13 @@
 /* ============= Responsive ==============*/
 let nav = document.getElementById("navigasi");
+let profile = document.getElementById("profile");
+let edu = document.getElementById("edu");
+let skill = document.getElementById("skills");
+let groupy = document.getElementsByClassName("groupy");
+let home_nav = document.getElementById("home_nav");
+let profile_nav = document.getElementById("profile_nav");
+let skill_nav = document.getElementById("skill_navbar");
+console.log(profile.offsetTop);
 window.onscroll = function() {
     var distanceScrolled = document.documentElement.scrollTop;
     if (distanceScrolled <= 75) {
@@ -7,6 +15,31 @@ window.onscroll = function() {
     } else {
         nav.style.backgroundColor = "#212121bb";
     }
+    if (distanceScrolled <= profile.offsetTop - 200) {
+        home_nav.classList.add("active");
+        skill_nav.classList.remove("active");
+        profile_nav.classList.remove("active");
+    } else if (distanceScrolled <= profile.offsetTop + 200) {
+        home_nav.classList.remove("active");
+        skill_nav.classList.remove("active");
+        profile_nav.classList.add("active");
+        for (let i = 0; i < groupy.length; i++) {
+            groupy[i].classList.remove("active");
+        }
+    } else if (distanceScrolled <= edu.offsetTop + 300) {
+        profile_nav.classList.remove("active");
+        skill_nav.classList.remove("active");
+        for (let i = 0; i < groupy.length; i++) {
+            groupy[i].classList.add("active");
+        }
+    } else if (distanceScrolled <= skill.offsetTop) {
+        for (let i = 0; i < groupy.length; i++) {
+            groupy[i].classList.remove("active");
+        }
+        home_nav.classList.remove("active");
+        skill_nav.classList.add("active");
+    }
+
 }
 
 function myFunction(x) {
